@@ -1,7 +1,7 @@
-USE [WeddingSiteBuilder]
+USE [WeddingBuilder]
 GO
 
-/****** Object:  Table [dbo].[RSVPLink]    Script Date: 12/5/2015 8:55:22 AM ******/
+/****** Object:  Table [dbo].[RSVPLink]    Script Date: 12/5/2015 10:59:18 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -13,6 +13,7 @@ GO
 
 CREATE TABLE [dbo].[RSVPLink](
 	[RSVPLinkID] [bigint] IDENTITY(1,1) NOT NULL,
+	[AttendeeID] [bigint] NOT NULL,
 	[RSVPNameBlub] [varchar](50) NOT NULL,
 	[GuidToken] [uniqueidentifier] NOT NULL,
 	[CreateDate] [datetime] NOT NULL,
@@ -26,6 +27,13 @@ CREATE TABLE [dbo].[RSVPLink](
 GO
 
 SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[RSVPLink]  WITH CHECK ADD  CONSTRAINT [FK_RSVPLink_Attendee] FOREIGN KEY([AttendeeID])
+REFERENCES [dbo].[Attendee] ([AttendeeID])
+GO
+
+ALTER TABLE [dbo].[RSVPLink] CHECK CONSTRAINT [FK_RSVPLink_Attendee]
 GO
 
 
