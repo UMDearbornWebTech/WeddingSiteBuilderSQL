@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Reception]    Script Date: 12/3/2015 10:47:22 PM ******/
+/****** Object:  Table [dbo].[Reception]    Script Date: 12/5/2015 8:54:48 AM ******/
 SET ANSI_NULLS ON
 GO
 

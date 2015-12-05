@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Person]    Script Date: 12/3/2015 10:07:51 PM ******/
+/****** Object:  Table [dbo].[Person]    Script Date: 12/5/2015 8:53:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,7 +12,7 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Person](
-	[PersonID] [bigint] NOT NULL IDENTITY(1,1),
+	[PersonID] [bigint] NOT NULL,
 	[Prefix] [varchar](20) NOT NULL,
 	[FirstName] [varchar](50) NOT NULL,
 	[MiddleName] [varchar](50) NULL,

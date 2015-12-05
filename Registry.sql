@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Registry]    Script Date: 12/3/2015 10:12:07 PM ******/
+/****** Object:  Table [dbo].[Registry]    Script Date: 12/5/2015 8:55:05 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,7 +14,6 @@ GO
 CREATE TABLE [dbo].[Registry](
 	[RegistryID] [bigint] IDENTITY(1,1) NOT NULL,
 	[WeddingID] [bigint] NOT NULL,
-	[StoreID] [bigint] NOT NULL,
 	[StoreName] [varchar](50) NOT NULL,
 	[Address1] [varchar](100) NULL,
 	[Address2] [varchar](50) NULL,

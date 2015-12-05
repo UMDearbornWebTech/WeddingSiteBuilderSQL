@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Attendee]    Script Date: 12/3/2015 10:03:10 PM ******/
+/****** Object:  Table [dbo].[Attendee]    Script Date: 12/5/2015 8:50:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,19 +12,19 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Attendee](
-	[AttendeeID] [bigint] IDENTITY(1,1) NOT NULL,
+	[AttendeeID] [bigint]IDENTITY(1,1) NOT NULL,
 	[PersonID] [bigint] NOT NULL,
 	[WeddingID] [bigint] NOT NULL,
 	[WeddingRole] [varchar](50) NOT NULL,
 	[Relationship] [varchar](50) NOT NULL,
 	[Side] [varchar](5) NOT NULL,
-	[Attending] [varchar](1) NULL,
+	[Attending] [bit] NULL,
 	[numberofRSVPs] [int] NOT NULL,
-	[PartyMemberBlub] [varchar](250) NULL,
+	[PartyMember] [bit] NULL,
+	[PartyMemberBlurb] [varchar](250) NULL,
 	[RSVPStatus] [bit] NULL,
-	[GuidToken] [uniqueidentifier] NULL,
 	[CreateDate] [datetime] NOT NULL,
-	[LastUpdated] [datetime] NULL,
+	[LastUpdated] [datetime] NOT NULL,
  CONSTRAINT [PK_Attendee] PRIMARY KEY CLUSTERED 
 (
 	[AttendeeID] ASC
