@@ -1,4 +1,4 @@
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Wedding]    Script Date: 11/29/2015 1:20:29 PM ******/
@@ -30,7 +30,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Attendee]    Script Date: 11/29/2015 1:19:35 PM ******/
@@ -69,7 +69,7 @@ SET ANSI_PADDING OFF
 GO
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Ceremony]    Script Date: 11/29/2015 1:23:05 PM ******/
@@ -110,7 +110,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Hotel]    Script Date: 11/29/2015 1:23:41 PM ******/
@@ -151,7 +151,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Registry]    Script Date: 11/29/2015 1:24:32 PM ******/
@@ -191,7 +191,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Photo]    Script Date: 11/29/2015 1:25:10 PM ******/
@@ -222,7 +222,7 @@ SET ANSI_PADDING OFF
 GO
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Person]    Script Date: 11/29/2015 1:25:53 PM ******/
@@ -267,7 +267,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[RSVPLink]    Script Date: 11/29/2015 1:26:20 PM ******/
@@ -301,7 +301,7 @@ GO
 
 
 
-USE [WeddingBuilder]
+USE [WeddingSiteBuilder]
 GO
 
 /****** Object:  Table [dbo].[Reception]    Script Date: 11/29/2015 1:26:50 PM ******/
