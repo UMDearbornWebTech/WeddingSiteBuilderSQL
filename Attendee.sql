@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Attendee]    Script Date: 12/5/2015 10:59:03 AM ******/
+/****** Object:  Table [dbo].[Attendee]    Script Date: 12/6/2015 10:57:48 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -15,11 +15,11 @@ CREATE TABLE [dbo].[Attendee](
 	[AttendeeID] [bigint] IDENTITY(1,1) NOT NULL,
 	[PersonID] [bigint] NOT NULL,
 	[WeddingID] [bigint] NOT NULL,
-	[WeddingRole] [varchar](50) NOT NULL,
-	[Relationship] [varchar](50) NOT NULL,
+	[WeddingRole] [varchar](50) NULL,
+	[Relationship] [varchar](50) NULL,
 	[Side] [varchar](5) NOT NULL,
 	[Attending] [bit] NULL,
-	[numberofRSVPs] [int] NOT NULL,
+	[numberofRSVPs] [varchar](50) NULL,
 	[PartyMember] [bit] NULL,
 	[PartyMemberBlurb] [varchar](250) NULL,
 	[RSVPStatus] [bit] NULL,
@@ -28,12 +28,18 @@ CREATE TABLE [dbo].[Attendee](
  CONSTRAINT [PK_Attendee] PRIMARY KEY CLUSTERED 
 (
 	[AttendeeID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
 
 GO
 
 SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Attendee] ADD  CONSTRAINT [CreateDate_Def_Attendee]  DEFAULT (getdate()) FOR [CreateDate]
+GO
+
+ALTER TABLE [dbo].[Attendee] ADD  CONSTRAINT [LastUpdated_Def_Attendee]  DEFAULT (getdate()) FOR [LastUpdated]
 GO
 
 ALTER TABLE [dbo].[Attendee]  WITH CHECK ADD  CONSTRAINT [FK_Attendee_Person] FOREIGN KEY([PersonID])
@@ -49,5 +55,8 @@ GO
 
 ALTER TABLE [dbo].[Attendee] CHECK CONSTRAINT [FK_Attendee_Wedding]
 GO
+
+
+
 
 

@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Photo]    Script Date: 12/5/2015 8:54:18 AM ******/
+/****** Object:  Table [dbo].[Photo]    Script Date: 12/6/2015 10:59:56 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -20,12 +20,18 @@ CREATE TABLE [dbo].[Photo](
  CONSTRAINT [PK_Photo] PRIMARY KEY CLUSTERED 
 (
 	[PhotoID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
 
 GO
 
 SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Photo] ADD  CONSTRAINT [CreateDate_Def_Photo]  DEFAULT (getdate()) FOR [CreateDate]
+GO
+
+ALTER TABLE [dbo].[Photo] ADD  CONSTRAINT [LastUpdated_Def_Photo]  DEFAULT (getdate()) FOR [LastUpdated]
 GO
 
 ALTER TABLE [dbo].[Photo]  WITH CHECK ADD  CONSTRAINT [FK_Photo_Wedding] FOREIGN KEY([WeddingID])
@@ -34,5 +40,4 @@ GO
 
 ALTER TABLE [dbo].[Photo] CHECK CONSTRAINT [FK_Photo_Wedding]
 GO
-
 
