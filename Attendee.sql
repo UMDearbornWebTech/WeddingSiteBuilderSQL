@@ -1,7 +1,7 @@
 USE [WeddingSiteBuilder]
 GO
 
-/****** Object:  Table [dbo].[Attendee]    Script Date: 12/6/2015 10:57:48 AM ******/
+/****** Object:  Table [dbo].[Attendee]    Script Date: 12/6/2015 12:26:43 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,12 +19,12 @@ CREATE TABLE [dbo].[Attendee](
 	[Relationship] [varchar](50) NULL,
 	[Side] [varchar](5) NOT NULL,
 	[Attending] [bit] NULL,
-	[numberofRSVPs] [varchar](50) NULL,
 	[PartyMember] [bit] NULL,
 	[PartyMemberBlurb] [varchar](250) NULL,
 	[RSVPStatus] [bit] NULL,
 	[CreateDate] [datetime] NOT NULL,
 	[LastUpdated] [datetime] NOT NULL,
+	[NumberofRSVPs] [int] NULL,
  CONSTRAINT [PK_Attendee] PRIMARY KEY CLUSTERED 
 (
 	[AttendeeID] ASC
@@ -55,8 +55,3 @@ GO
 
 ALTER TABLE [dbo].[Attendee] CHECK CONSTRAINT [FK_Attendee_Wedding]
 GO
-
-
-
-
-
